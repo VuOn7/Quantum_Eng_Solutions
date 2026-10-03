@@ -3,614 +3,279 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Quantum Engineering Solution — Design · Supervision · Construction · Renovation · Valuation</title>
-<meta name="description" content="Quantum Engineering Solution is a Nepal-based engineering consultancy delivering architectural and structural design, site supervision, construction, renovation, and property valuation — under one accountable roof." />
-
-<!-- Open Graph -->
-<meta property="og:type" content="website" />
+<title>Quantum Engineering Solution | Design, Supervision, Construction, Renovation & Valuation</title>
+<meta name="description" content="Quantum Engineering Solution Pvt. Ltd. is an engineering company in Nepal providing design, site supervision, construction, renovation and property valuation." />
+<link rel="canonical" href="https://quantumengineeringsolution.com.np/" />
 <meta property="og:title" content="Quantum Engineering Solution" />
-<meta property="og:description" content="Design, site supervision, construction, renovation, and valuation — one accountable engineering team, from the first line drawn to the final valuation." />
-<meta property="og:url" content="https://quantumengineeringsolution.com.np" />
-<meta property="og:site_name" content="Quantum Engineering Solution" />
-
-<link rel="canonical" href="https://quantumengineeringsolution.com.np" />
-
-<!-- Inline SVG favicon: a braced structural node -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2316202A'/%3E%3Crect x='7' y='7' width='18' height='18' fill='none' stroke='%23F1F3F5' stroke-width='1.6'/%3E%3Cpath d='M7 7 L25 25 M25 7 L7 25' stroke='%23C2792B' stroke-width='1.4'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23C2792B'/%3E%3C/svg%3E" />
-
+<meta property="og:description" content="Design, site supervision, construction, renovation and valuation in Nepal." />
+<meta property="og:image" content="https://quantumengineeringsolution.com.np/images/hero.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <style>
   :root{
-    --ink:#16202A;
-    --ink-2:#243441;
-    --ink-soft:#5A6B78;
-    --paper:#F1F3F5;
-    --paper-2:#E7EAEE;
-    --paper-3:#DCE0E5;
-    --line:rgba(22,32,42,0.14);
-    --line-strong:rgba(22,32,42,0.30);
+    --navy:#1B2B3A;
+    --text:#2E3A45;
+    --muted:#66727D;
+    --light:#F5F7F9;
+    --border:#E3E7EB;
     --accent:#C2792B;
-    --accent-bright:#DA9134;
-    --accent-deep:#9A5E1E;
     --white:#FFFFFF;
-    --paper-line:rgba(241,243,245,0.16);
-    --maxw:1180px;
-    --pad:clamp(1.25rem,5vw,3rem);
   }
-
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
-
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
-    font-size:clamp(1rem,0.6vw + 0.9rem,1.075rem);
-    line-height:1.62;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-  }
-
-  h1,h2,h3{
-    font-family:"Space Grotesk",sans-serif;
-    font-weight:600;
-    line-height:1.05;
-    letter-spacing:-0.02em;
-    margin:0;
-  }
-
+  body{margin:0;font-family:"Inter",system-ui,sans-serif;color:var(--text);background:var(--white);line-height:1.65;font-size:16px;}
+  img{max-width:100%;display:block;}
   a{color:inherit;}
+  h1,h2,h3{color:var(--navy);line-height:1.2;margin:0;}
+  .container{max-width:1140px;margin:0 auto;padding:0 20px;}
+  section{padding:80px 0;}
+  .section-title{text-align:center;max-width:640px;margin:0 auto 48px;}
+  .section-title h2{font-size:clamp(1.7rem,3.5vw,2.3rem);}
+  .section-title p{color:var(--muted);margin:12px 0 0;}
+  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:13px 26px;border-radius:6px;border:none;cursor:pointer;font-size:1rem;font-family:inherit;}
+  .btn:hover{background:#A9651F;}
+  .btn-outline{background:transparent;border:2px solid #fff;}
+  .btn-outline:hover{background:#fff;color:var(--navy);}
 
-  .mono{
-    font-family:"IBM Plex Mono",monospace;
-    text-transform:uppercase;
-    letter-spacing:0.16em;
-    font-size:0.72rem;
-    font-weight:500;
+  /* Photo slot: shows a grey box with the file name until the real photo is added */
+  .photo{position:relative;background:#E9EDF1;border-radius:8px;overflow:hidden;}
+  .photo::before{content:attr(data-file);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#8A96A1;font-size:.85rem;padding:10px;text-align:center;}
+  .photo img{position:relative;width:100%;height:100%;object-fit:cover;}
+
+  /* Header */
+  header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:10;}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px;}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;color:var(--navy);font-size:1.1rem;}
+  .logo img{height:42px;width:auto;}
+  .nav ul{list-style:none;display:flex;gap:28px;margin:0;padding:0;}
+  .nav ul a{text-decoration:none;font-weight:500;color:var(--text);}
+  .nav ul a:hover{color:var(--accent);}
+  .menu-btn{display:none;background:none;border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:1.2rem;cursor:pointer;}
+
+  /* Hero */
+  .hero{background:var(--navy) url("images/hero.jpg") center/cover no-repeat;position:relative;color:#fff;padding:140px 0 120px;}
+  .hero::before{content:"";position:absolute;inset:0;background:rgba(15,25,35,.6);}
+  .hero .container{position:relative;}
+  .hero h1{color:#fff;font-size:clamp(2.1rem,5vw,3.4rem);max-width:720px;}
+  .hero p{font-size:1.15rem;max-width:600px;margin:20px 0 32px;color:#E6EBEF;}
+  .hero .buttons{display:flex;gap:14px;flex-wrap:wrap;}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+  .about-grid .photo{aspect-ratio:4/3;}
+  .about-grid h2{font-size:clamp(1.7rem,3.5vw,2.3rem);margin-bottom:16px;}
+  .about-grid p{color:var(--muted);}
+  .highlights{display:flex;gap:30px;margin-top:24px;flex-wrap:wrap;}
+  .highlights div strong{display:block;font-size:1.6rem;color:var(--accent);}
+  .highlights div span{font-size:.9rem;color:var(--muted);}
+
+  /* Services */
+  .services{background:var(--light);}
+  .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05);}
+  .card .photo{aspect-ratio:16/10;border-radius:0;}
+  .card .body{padding:22px;}
+  .card h3{font-size:1.2rem;margin-bottom:8px;}
+  .card p{color:var(--muted);margin:0;font-size:.95rem;}
+
+  /* Projects */
+  .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .project-grid .photo{aspect-ratio:4/3;}
+
+  /* Team */
+  .team{background:var(--light);}
+  .md{display:grid;grid-template-columns:300px 1fr;gap:44px;align-items:center;max-width:900px;margin:0 auto;}
+  .md .photo{aspect-ratio:4/5;}
+  .md h3{font-size:1.6rem;}
+  .md .role{color:var(--accent);font-weight:600;margin:4px 0 16px;}
+  .md p{color:var(--muted);}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;}
+  .info-item{margin-bottom:22px;}
+  .info-item strong{display:block;color:var(--navy);}
+  .info-item a{text-decoration:none;color:var(--muted);}
+  .info-item span{color:var(--muted);}
+  form{display:grid;gap:14px;}
+  input,textarea{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:6px;font-family:inherit;font-size:1rem;}
+  input:focus,textarea:focus{outline:2px solid var(--accent);border-color:transparent;}
+  textarea{min-height:130px;resize:vertical;}
+
+  footer{background:var(--navy);color:#C5CDD4;text-align:center;padding:30px 20px;font-size:.9rem;}
+
+  /* Mobile */
+  @media(max-width:860px){
+    .about-grid,.contact-grid,.md{grid-template-columns:1fr;}
+    .md .photo{max-width:300px;}
+    .service-grid,.project-grid{grid-template-columns:1fr 1fr;}
+    .menu-btn{display:block;}
+    .nav ul{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--border);}
+    .nav ul.open{display:flex;}
+    .nav ul li a{display:block;padding:14px 20px;border-top:1px solid var(--border);}
+    section{padding:60px 0;}
   }
-
-  .wrap{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding-left:var(--pad);
-    padding-right:var(--pad);
-  }
-
-  .band{padding-top:clamp(4.5rem,9vw,8rem);padding-bottom:clamp(4.5rem,9vw,8rem);}
-
-  .eyebrow{
-    color:var(--accent-deep);
-    display:inline-flex;
-    align-items:center;
-    gap:0.6rem;
-    margin-bottom:1.4rem;
-  }
-  .eyebrow::before{
-    content:"";
-    width:26px;height:1px;background:var(--accent);
-    display:inline-block;
-  }
-
-  /* ---------- Header ---------- */
-  header.site{
-    position:sticky;top:0;z-index:50;
-    background:rgba(241,243,245,0.82);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav{
-    display:flex;align-items:center;justify-content:space-between;
-    height:72px;
-  }
-  .brand{display:flex;align-items:center;gap:0.7rem;text-decoration:none;font-family:"Space Grotesk";font-weight:600;letter-spacing:-0.01em;}
-  .brand svg{flex:0 0 auto;display:block;}
-  .brand .bt{font-size:1.02rem;line-height:1;}
-  .brand .bt small{display:block;font-family:"IBM Plex Mono";font-weight:400;font-size:0.56rem;letter-spacing:0.22em;color:var(--ink-soft);text-transform:uppercase;margin-top:3px;}
-
-  .navlinks{display:flex;align-items:center;gap:2rem;}
-  .navlinks a{text-decoration:none;font-size:0.92rem;font-weight:500;color:var(--ink-2);position:relative;padding:4px 0;transition:color .2s;}
-  .navlinks a:hover{color:var(--accent-deep);}
-  .navlinks a::after{content:"";position:absolute;left:0;bottom:-2px;height:1px;width:0;background:var(--accent);transition:width .25s ease;}
-  .navlinks a:hover::after{width:100%;}
-
-  .cta-btn{
-    display:inline-flex;align-items:center;gap:0.5rem;
-    background:var(--ink);color:var(--paper);
-    text-decoration:none;font-weight:500;font-size:0.9rem;
-    padding:0.68rem 1.15rem;border:1px solid var(--ink);
-    transition:background .2s,color .2s,transform .2s;
-  }
-  .cta-btn:hover{background:var(--accent-deep);border-color:var(--accent-deep);}
-  .cta-btn.ghost{background:transparent;color:var(--ink);}
-  .cta-btn.ghost:hover{background:var(--ink);color:var(--paper);}
-
-  .menu-toggle{display:none;background:none;border:1px solid var(--line-strong);width:44px;height:40px;cursor:pointer;align-items:center;justify-content:center;}
-  .menu-toggle span,.menu-toggle span::before,.menu-toggle span::after{content:"";display:block;width:20px;height:1.6px;background:var(--ink);position:relative;transition:transform .25s,opacity .2s;}
-  .menu-toggle span::before{position:absolute;top:-6px;}
-  .menu-toggle span::after{position:absolute;top:6px;}
-  body.menu-open .menu-toggle span{background:transparent;}
-  body.menu-open .menu-toggle span::before{transform:translateY(6px) rotate(45deg);}
-  body.menu-open .menu-toggle span::after{transform:translateY(-6px) rotate(-45deg);}
-
-  /* ---------- Hero ---------- */
-  .hero{position:relative;overflow:hidden;}
-  .hero .sheet{
-    position:relative;
-    padding-top:clamp(3.5rem,8vw,7rem);
-    padding-bottom:clamp(4rem,9vw,7.5rem);
-  }
-  .grid-bg{
-    position:absolute;inset:0;z-index:0;pointer-events:none;
-    background-image:
-      linear-gradient(var(--line) 1px,transparent 1px),
-      linear-gradient(90deg,var(--line) 1px,transparent 1px);
-    background-size:34px 34px;
-    -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,0.9),rgba(0,0,0,0.15) 70%,transparent);
-    mask-image:linear-gradient(180deg,rgba(0,0,0,0.9),rgba(0,0,0,0.15) 70%,transparent);
-    opacity:.7;
-  }
-  .hero .wrap{position:relative;z-index:1;}
-
-  /* registration corner ticks */
-  .reg{position:absolute;width:16px;height:16px;z-index:2;pointer-events:none;}
-  .reg::before,.reg::after{content:"";position:absolute;background:var(--line-strong);}
-  .reg::before{width:16px;height:1px;top:0;}
-  .reg::after{height:16px;width:1px;left:0;}
-  .reg.tl{top:14px;left:14px;}
-  .reg.tr{top:14px;right:14px;transform:scaleX(-1);}
-  .reg.bl{bottom:14px;left:14px;transform:scaleY(-1);}
-  .reg.br{bottom:14px;right:14px;transform:scale(-1,-1);}
-
-  .titleblock{
-    position:absolute;right:var(--pad);top:clamp(1rem,3vw,2rem);z-index:3;
-    border:1px solid var(--line-strong);
-    background:rgba(241,243,245,0.6);
-    display:grid;grid-template-columns:auto;min-width:190px;
-  }
-  .titleblock div{
-    padding:6px 12px;border-bottom:1px solid var(--line);
-    display:flex;justify-content:space-between;gap:1.2rem;
-    font-family:"IBM Plex Mono";font-size:0.62rem;letter-spacing:0.1em;color:var(--ink-2);
-  }
-  .titleblock div:last-child{border-bottom:none;}
-  .titleblock span:first-child{color:var(--ink-soft);}
-
-  .hero h1{
-    font-size:clamp(2.6rem,7vw,5.4rem);
-    font-weight:600;
-    max-width:16ch;
-    margin-top:0.4rem;
-  }
-  .hero h1 .em{color:var(--accent-deep);}
-  .hero .lede{
-    font-size:clamp(1.05rem,1.4vw,1.28rem);
-    color:var(--ink-2);
-    max-width:52ch;
-    margin-top:1.6rem;
-  }
-  .hero .actions{display:flex;flex-wrap:wrap;gap:0.9rem;margin-top:2.2rem;}
-
-  /* animated dimension line under hero */
-  .dimline{margin-top:2.6rem;max-width:640px;}
-  .dimline svg{width:100%;height:34px;display:block;overflow:visible;}
-  .dimline .draw{stroke:var(--line-strong);stroke-width:1;fill:none;stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 1.6s .3s ease forwards;}
-  .dimline .tick{stroke:var(--accent);stroke-width:1.4;}
-  .dimline text{font-family:"IBM Plex Mono";font-size:9px;letter-spacing:0.12em;fill:var(--ink-soft);text-transform:uppercase;}
-  @keyframes draw{to{stroke-dashoffset:0;}}
-  @media (prefers-reduced-motion:reduce){.dimline .draw{animation:none;stroke-dashoffset:0;}}
-
-  /* ---------- Services ---------- */
-  .sec-head{max-width:60ch;}
-  .sec-head h2{font-size:clamp(1.9rem,4vw,3rem);margin-top:0.5rem;}
-  .sec-head p{color:var(--ink-2);margin-top:1rem;}
-
-  .svc-grid{
-    margin-top:clamp(2.5rem,5vw,4rem);
-    display:grid;gap:1px;background:var(--line);
-    border:1px solid var(--line);
-    grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));
-  }
-  .svc{
-    background:var(--paper);
-    padding:clamp(1.6rem,2.6vw,2.4rem);
-    display:flex;flex-direction:column;gap:0.8rem;
-    transition:background .25s;
-    position:relative;
-  }
-  .svc:hover{background:var(--paper-2);}
-  .svc .code{color:var(--accent-deep);}
-  .svc h3{font-size:1.4rem;font-weight:500;letter-spacing:-0.01em;}
-  .svc p{color:var(--ink-2);font-size:0.96rem;margin:0;}
-  .svc .arrow{margin-top:auto;padding-top:1rem;color:var(--ink-soft);font-size:0.8rem;font-family:"IBM Plex Mono";letter-spacing:0.1em;text-transform:uppercase;opacity:0;transform:translateX(-6px);transition:opacity .25s,transform .25s;}
-  .svc:hover .arrow{opacity:1;transform:translateX(0);color:var(--accent-deep);}
-
-  /* ---------- Approach (dark) ---------- */
-  .dark{background:var(--ink);color:var(--paper);}
-  .dark .eyebrow{color:var(--accent-bright);}
-  .dark .eyebrow::before{background:var(--accent-bright);}
-  .dark h2{color:var(--white);}
-  .dark p{color:#C4CDD4;}
-
-  .steps{
-    margin-top:clamp(2.5rem,5vw,3.5rem);
-    display:grid;gap:1px;background:var(--paper-line);
-    border:1px solid var(--paper-line);
-    grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));
-  }
-  .step{background:var(--ink);padding:clamp(1.5rem,2.4vw,2.1rem);}
-  .step .num{font-family:"Space Grotesk";font-weight:700;font-size:2.2rem;color:var(--accent-bright);line-height:1;}
-  .step h3{font-size:1.12rem;font-weight:600;margin-top:1rem;color:var(--white);}
-  .step p{font-size:0.9rem;margin-top:0.5rem;color:#AEB9C1;}
-
-  .creds{display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:clamp(2.5rem,5vw,3.5rem);padding-top:2rem;border-top:1px solid var(--paper-line);}
-  .cred .n{font-family:"Space Grotesk";font-weight:600;font-size:2rem;color:var(--white);}
-  .cred .l{font-family:"IBM Plex Mono";font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-bright);margin-top:0.3rem;}
-
-  /* ---------- Leadership ---------- */
-  .lead-grid{display:grid;grid-template-columns:1fr;gap:clamp(2rem,5vw,4rem);align-items:start;margin-top:clamp(2rem,4vw,3rem);}
-  @media(min-width:820px){.lead-grid{grid-template-columns:0.9fr 1.1fr;}}
-  .portrait{
-    aspect-ratio:4/5;background:var(--paper-2);border:1px solid var(--line);
-    display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
-  }
-  .portrait .mono{position:absolute;bottom:14px;left:14px;color:var(--ink-soft);}
-  .portrait .initials{font-family:"Space Grotesk";font-weight:600;font-size:clamp(3rem,7vw,5rem);color:var(--paper-3);letter-spacing:-0.03em;}
-  .portrait .pgrid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:26px 26px;opacity:.6;}
-  .lead-body h3{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:600;}
-  .lead-body .role{color:var(--accent-deep);font-family:"IBM Plex Mono";font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;margin-top:0.5rem;}
-  .lead-body p{color:var(--ink-2);margin-top:1.3rem;}
-  .lead-body .li{display:inline-flex;align-items:center;gap:0.5rem;margin-top:1.6rem;text-decoration:none;font-weight:500;font-size:0.92rem;border-bottom:1px solid var(--accent);padding-bottom:2px;color:var(--ink);transition:color .2s,border-color .2s;}
-  .lead-body .li:hover{color:var(--accent-deep);}
-
-  /* ---------- Contact (dark) ---------- */
-  .contact-grid{display:grid;grid-template-columns:1fr;gap:clamp(2.5rem,5vw,4rem);margin-top:clamp(2.5rem,5vw,3.5rem);}
-  @media(min-width:820px){.contact-grid{grid-template-columns:1fr 1fr;}}
-  .cinfo dl{margin:0;display:grid;gap:1.6rem;}
-  .cinfo .row .k{font-family:"IBM Plex Mono";font-size:0.66rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent-bright);}
-  .cinfo .row .v{font-size:1.05rem;margin-top:0.3rem;color:var(--white);}
-  .cinfo .row .v a{text-decoration:none;border-bottom:1px solid rgba(218,145,52,0.5);}
-  .cinfo .row .v a:hover{color:var(--accent-bright);}
-
-  form.contact{display:grid;gap:1rem;}
-  form.contact label{font-family:"IBM Plex Mono";font-size:0.64rem;letter-spacing:0.14em;text-transform:uppercase;color:#AEB9C1;display:block;margin-bottom:0.45rem;}
-  form.contact input,form.contact textarea{
-    width:100%;background:var(--ink-2);border:1px solid var(--paper-line);color:var(--white);
-    font-family:inherit;font-size:0.98rem;padding:0.8rem 0.9rem;border-radius:0;
-    transition:border-color .2s;
-  }
-  form.contact input:focus,form.contact textarea:focus{outline:none;border-color:var(--accent-bright);}
-  form.contact textarea{resize:vertical;min-height:110px;}
-  form.contact button{
-    justify-self:start;margin-top:0.4rem;
-    background:var(--accent);color:var(--ink);border:1px solid var(--accent);
-    font-family:"IBM Plex Sans";font-weight:600;font-size:0.95rem;
-    padding:0.8rem 1.6rem;cursor:pointer;transition:background .2s,transform .15s;
-  }
-  form.contact button:hover{background:var(--accent-bright);border-color:var(--accent-bright);}
-
-  /* ---------- Footer ---------- */
-  footer.site{background:#0F171E;color:#AEB9C1;padding:clamp(3rem,5vw,4rem) 0 2rem;}
-  .foot-top{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:flex-start;}
-  .foot-brand{max-width:34ch;}
-  .foot-brand .bt{font-family:"Space Grotesk";font-weight:600;color:var(--white);font-size:1.15rem;}
-  .foot-brand p{font-size:0.9rem;margin-top:0.8rem;}
-  .foot-links{display:flex;gap:3rem;flex-wrap:wrap;}
-  .foot-links .col a{display:block;text-decoration:none;font-size:0.9rem;margin-bottom:0.7rem;color:#AEB9C1;transition:color .2s;}
-  .foot-links .col a:hover{color:var(--accent-bright);}
-  .foot-links .col .h{font-family:"IBM Plex Mono";font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:#6E7C86;margin-bottom:1rem;}
-  .foot-bottom{margin-top:3rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);display:flex;flex-wrap:wrap;gap:0.8rem;justify-content:space-between;font-family:"IBM Plex Mono";font-size:0.66rem;letter-spacing:0.08em;color:#6E7C86;}
-
-  /* reveal */
-  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
-  .reveal.in{opacity:1;transform:none;}
-  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
-
-  :focus-visible{outline:2px solid var(--accent-deep);outline-offset:3px;}
-
-  /* ---------- Mobile ---------- */
-  @media(max-width:760px){
-    .navlinks{
-      position:fixed;inset:72px 0 auto 0;flex-direction:column;align-items:flex-start;gap:0;
-      background:var(--paper);border-bottom:1px solid var(--line);
-      padding:0.5rem var(--pad) 1.5rem;
-      transform:translateY(-140%);transition:transform .3s ease;
-    }
-    body.menu-open .navlinks{transform:translateY(0);}
-    .navlinks a{width:100%;padding:0.9rem 0;border-bottom:1px solid var(--line);font-size:1rem;}
-    .navlinks .cta-btn{margin-top:1rem;width:100%;justify-content:center;}
-    .menu-toggle{display:flex;}
-    .titleblock{display:none;}
+  @media(max-width:560px){
+    .service-grid,.project-grid{grid-template-columns:1fr;}
   }
 </style>
 </head>
 <body>
 
-<header class="site">
-  <div class="wrap nav">
-    <a href="#top" class="brand" aria-label="Quantum Engineering Solution — home">
-      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
-        <rect x="6.5" y="6.5" width="19" height="19" fill="none" stroke="#16202A" stroke-width="1.6"/>
-        <path d="M6.5 6.5 L25.5 25.5 M25.5 6.5 L6.5 25.5" stroke="#C2792B" stroke-width="1.3"/>
-        <circle cx="16" cy="16" r="2.6" fill="#16202A"/>
-      </svg>
-      <span class="bt">Quantum<small>Engineering Solution</small></span>
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">
+      <img src="images/logo.png" alt="" onerror="this.remove()" />
+      Quantum Engineering Solution
     </a>
-    <nav class="navlinks" id="nav">
-      <a href="#services">Services</a>
-      <a href="#approach">Approach</a>
-      <a href="#leadership">Leadership</a>
-      <a href="#contact" class="cta-btn">Start a project</a>
-    </nav>
-    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" id="menuBtn"><span></span></button>
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <ul id="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
 </header>
 
-<main id="top">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="sheet">
-      <div class="grid-bg"></div>
-      <span class="reg tl"></span><span class="reg tr"></span>
-      <span class="reg bl"></span><span class="reg br"></span>
-
-      <div class="titleblock" aria-hidden="true">
-        <div><span>Project</span><span>QES-WEB</span></div>
-        <div><span>Client</span><span>QES Pvt. Ltd.</span></div>
-        <div><span>Sheet</span><span>01 / 01</span></div>
-        <div><span>Rev</span><span>2026</span></div>
-      </div>
-
-      <div class="wrap">
-        <span class="eyebrow mono">Quantum Engineering Solution · Nepal</span>
-        <h1>From the first line drawn<br>to the <span class="em">final valuation.</span></h1>
-        <p class="lede">A Nepal-based engineering consultancy delivering architectural &amp; structural design, site supervision, construction, renovation, and property valuation — one accountable team across the entire life of your building.</p>
-
-        <div class="actions">
-          <a href="#contact" class="cta-btn">Start a project</a>
-          <a href="#services" class="cta-btn ghost">See what we do</a>
-        </div>
-
-        <div class="dimline" aria-hidden="true">
-          <svg viewBox="0 0 640 34" preserveAspectRatio="none">
-            <path class="draw" d="M2 22 H638" />
-            <line class="tick" x1="2" y1="14" x2="2" y2="30"/>
-            <line class="tick" x1="160" y1="16" x2="160" y2="28"/>
-            <line class="tick" x1="320" y1="16" x2="320" y2="28"/>
-            <line class="tick" x1="480" y1="16" x2="480" y2="28"/>
-            <line class="tick" x1="638" y1="14" x2="638" y2="30"/>
-            <text x="2" y="10">design</text>
-            <text x="130" y="10">supervise</text>
-            <text x="298" y="10">build</text>
-            <text x="452" y="10">renovate</text>
-            <text x="590" y="10">value</text>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="band" id="services">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow mono">What we do</span>
-        <h2>Five disciplines, one drawing set.</h2>
-        <p>Most projects touch three or four different firms and lose something at every handover. We keep design, execution, and valuation under a single set of drawings — and a single point of accountability.</p>
-      </div>
-
-      <div class="svc-grid">
-        <article class="svc reveal">
-          <span class="code mono">SRV / 01</span>
-          <h3>Design</h3>
-          <p>Architectural and structural design worked to code — buildable on site, honest to your budget, and documented clearly enough to hand to any contractor.</p>
-          <span class="arrow">Drawings &amp; documentation →</span>
-        </article>
-        <article class="svc reveal">
-          <span class="code mono">SRV / 02</span>
-          <h3>Site Supervision</h3>
-          <p>On-site oversight that keeps the work true to the drawings — checking quality, sequence, and specification so what gets built is what was designed.</p>
-          <span class="arrow">Quality &amp; compliance →</span>
-        </article>
-        <article class="svc reveal">
-          <span class="code mono">SRV / 03</span>
-          <h3>Construction</h3>
-          <p>Turning approved drawings into finished, durable structures through disciplined execution, dependable schedules, and clear cost control.</p>
-          <span class="arrow">Build &amp; delivery →</span>
-        </article>
-        <article class="svc reveal">
-          <span class="code mono">SRV / 04</span>
-          <h3>Renovation</h3>
-          <p>Reworking and strengthening what already stands — retrofits, extensions, and restorations that respect the existing structure while bringing it up to standard.</p>
-          <span class="arrow">Retrofit &amp; restore →</span>
-        </article>
-        <article class="svc reveal">
-          <span class="code mono">SRV / 05</span>
-          <h3>Valuation</h3>
-          <p>Independent property and asset valuation for loans, transactions, and decisions — prepared to the standards financial institutions rely on.</p>
-          <span class="arrow">Reports &amp; assessment →</span>
-        </article>
-        <article class="svc reveal" style="background:var(--ink);color:var(--paper);">
-          <span class="code mono" style="color:var(--accent-bright);">Not sure where to start?</span>
-          <h3 style="color:#fff;">Tell us the site.</h3>
-          <p style="color:#C4CDD4;">Send us the plot, the building, or the idea. We'll tell you which of the five you actually need — and what it will take.</p>
-          <a href="#contact" class="arrow" style="opacity:1;color:var(--accent-bright);text-decoration:none;">Get in touch →</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- APPROACH -->
-  <section class="band dark" id="approach">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow mono">How we work</span>
-        <h2>A straight line from brief to handover.</h2>
-        <p>Every engagement runs through the same disciplined sequence, so you always know which stage you're in and what comes next.</p>
-      </div>
-
-      <div class="steps">
-        <div class="step reveal">
-          <div class="num">01</div>
-          <h3>Brief &amp; site study</h3>
-          <p>We visit the site, understand your goals and budget, and establish what's feasible before a single line is drawn.</p>
-        </div>
-        <div class="step reveal">
-          <div class="num">02</div>
-          <h3>Design &amp; documentation</h3>
-          <p>Architectural and structural design developed to code, with drawings detailed enough to build from without guesswork.</p>
-        </div>
-        <div class="step reveal">
-          <div class="num">03</div>
-          <h3>Supervision &amp; build</h3>
-          <p>Construction and on-site supervision that hold the work to the drawings, the schedule, and the specification.</p>
-        </div>
-        <div class="step reveal">
-          <div class="num">04</div>
-          <h3>Valuation &amp; reporting</h3>
-          <p>Independent valuation and clear reporting when you need a defensible figure for a bank, a sale, or a decision.</p>
-        </div>
-      </div>
-
-      <div class="creds reveal">
-        <div class="cred"><div class="n">5</div><div class="l">Core disciplines</div></div>
-        <div class="cred"><div class="n">1</div><div class="l">Accountable team</div></div>
-        <div class="cred"><div class="n">Nepal</div><div class="l">Wide · working nationwide</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LEADERSHIP -->
-  <section class="band" id="leadership">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow mono">Leadership</span>
-        <h2>Led by an engineer, not an agency.</h2>
-      </div>
-
-      <div class="lead-grid">
-        <div class="portrait reveal" role="img" aria-label="Portrait of Jeewan Awasthi, Managing Director">
-          <div class="pgrid"></div>
-          <div class="initials">JA</div>
-          <span class="mono">MD / 001</span>
-        </div>
-        <div class="lead-body reveal">
-          <h3>Jeewan Awasthi</h3>
-          <div class="role">Managing Director</div>
-          <p>Jeewan Awasthi leads Quantum Engineering Solution as Managing Director, directing the firm's practice across design, supervision, construction, renovation, and valuation. His focus is work that is buildable, well-documented, and accountable from the first drawing to the final report — the standard every project here is measured against.</p>
-          <p>Working directly with clients from brief to handover, he keeps the firm's promise simple: honest engineering, clearly explained, delivered without the gaps that appear when a project passes through too many hands.</p>
-          <a class="li" href="https://np.linkedin.com/in/jeewan-awasthi-225884232" target="_blank" rel="noopener">
-            Connect on LinkedIn ↗
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="band dark" id="contact">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow mono">Start a project</span>
-        <h2>Tell us about your site.</h2>
-        <p>Send the details and we'll come back with the discipline you need, an approach, and next steps.</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="cinfo reveal">
-          <dl>
-            <div class="row"><dt class="k">Email</dt><dd class="v"><a href="mailto:info@quantumengineeringsolution.com.np">info@quantumengineeringsolution.com.np</a></dd></div>
-            <div class="row"><dt class="k">Phone</dt><dd class="v"><a href="tel:+977XXXXXXXXXX">+977 XX-XXX XXXX</a></dd></div>
-            <div class="row"><dt class="k">Office</dt><dd class="v">[Street, Ward, City]<br>Nepal</dd></div>
-            <div class="row"><dt class="k">Web</dt><dd class="v">quantumengineeringsolution.com.np</dd></div>
-          </dl>
-        </div>
-
-        <form class="contact reveal" id="contactForm">
-          <div>
-            <label for="name">Your name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div>
-            <label for="email">Email or phone</label>
-            <input type="text" id="email" name="email" required />
-          </div>
-          <div>
-            <label for="msg">About your project</label>
-            <textarea id="msg" name="msg" placeholder="Location, type of work, and what you need." required></textarea>
-          </div>
-          <button type="submit">Send enquiry</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site">
-  <div class="wrap">
-    <div class="foot-top">
-      <div class="foot-brand">
-        <div class="bt">Quantum Engineering Solution</div>
-        <p>Design, site supervision, construction, renovation, and valuation — one accountable engineering team, working across Nepal.</p>
-      </div>
-      <div class="foot-links">
-        <div class="col">
-          <div class="h">Company</div>
-          <a href="#services">Services</a>
-          <a href="#approach">Approach</a>
-          <a href="#leadership">Leadership</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="col">
-          <div class="h">Reach us</div>
-          <a href="mailto:info@quantumengineeringsolution.com.np">Email</a>
-          <a href="tel:+977XXXXXXXXXX">Phone</a>
-          <a href="https://np.linkedin.com/in/jeewan-awasthi-225884232" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© <span id="yr"></span> Quantum Engineering Solution Pvt. Ltd. · Nepal</span>
-      <span>quantumengineeringsolution.com.np</span>
+<!-- HERO: background photo = images/hero.jpg -->
+<section class="hero">
+  <div class="container">
+    <h1>Building Nepal with quality engineering</h1>
+    <p>Design, site supervision, construction, renovation and valuation — all from one trusted team.</p>
+    <div class="buttons">
+      <a href="#contact" class="btn">Get a Free Consultation</a>
+      <a href="#services" class="btn btn-outline">Our Services</a>
     </div>
   </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="photo" data-file="images/about.jpg"><img src="images/about.jpg" alt="Our team at work on site" onerror="this.remove()" /></div>
+    <div>
+      <h2>About Us</h2>
+      <p>Quantum Engineering Solution Pvt. Ltd. is an engineering company based in Nepal. We help homeowners, businesses and institutions plan, build, improve and value their properties.</p>
+      <p>From the first drawing to the final handover, one team stays responsible for your project — so nothing gets lost between designers, builders and supervisors.</p>
+      <div class="highlights">
+        <div><strong>5</strong><span>Core services</span></div>
+        <div><strong>1</strong><span>Team, start to finish</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Everything you need for your building project, under one roof.</p>
+    </div>
+    <div class="service-grid">
+      <div class="card">
+        <div class="photo" data-file="images/design.jpg"><img src="images/design.jpg" alt="Building design" onerror="this.remove()" /></div>
+        <div class="body"><h3>Design</h3><p>Architectural and structural designs that follow building codes and fit your budget.</p></div>
+      </div>
+      <div class="card">
+        <div class="photo" data-file="images/supervision.jpg"><img src="images/supervision.jpg" alt="Site supervision" onerror="this.remove()" /></div>
+        <div class="body"><h3>Site Supervision</h3><p>Regular on-site checks to make sure work matches the design and quality standards.</p></div>
+      </div>
+      <div class="card">
+        <div class="photo" data-file="images/construction.jpg"><img src="images/construction.jpg" alt="Construction" onerror="this.remove()" /></div>
+        <div class="body"><h3>Construction</h3><p>Reliable building work delivered on schedule, with clear costs from the start.</p></div>
+      </div>
+      <div class="card">
+        <div class="photo" data-file="images/renovation.jpg"><img src="images/renovation.jpg" alt="Renovation" onerror="this.remove()" /></div>
+        <div class="body"><h3>Renovation</h3><p>Repairs, extensions, retrofitting and upgrades for existing buildings.</p></div>
+      </div>
+      <div class="card">
+        <div class="photo" data-file="images/valuation.jpg"><img src="images/valuation.jpg" alt="Property valuation" onerror="this.remove()" /></div>
+        <div class="body"><h3>Valuation</h3><p>Property valuation reports for bank loans, sales and other financial decisions.</p></div>
+      </div>
+      <div class="card">
+        <div class="photo" data-file="images/consultation.jpg"><img src="images/consultation.jpg" alt="Consultation" onerror="this.remove()" /></div>
+        <div class="body"><h3>Consultation</h3><p>Not sure what you need? Talk to us and we'll guide you to the right solution.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Projects</h2>
+      <p>A look at some of our recent work.</p>
+    </div>
+    <div class="project-grid">
+      <div class="photo" data-file="images/project1.jpg"><img src="images/project1.jpg" alt="Project 1" onerror="this.remove()" /></div>
+      <div class="photo" data-file="images/project2.jpg"><img src="images/project2.jpg" alt="Project 2" onerror="this.remove()" /></div>
+      <div class="photo" data-file="images/project3.jpg"><img src="images/project3.jpg" alt="Project 3" onerror="this.remove()" /></div>
+      <div class="photo" data-file="images/project4.jpg"><img src="images/project4.jpg" alt="Project 4" onerror="this.remove()" /></div>
+      <div class="photo" data-file="images/project5.jpg"><img src="images/project5.jpg" alt="Project 5" onerror="this.remove()" /></div>
+      <div class="photo" data-file="images/project6.jpg"><img src="images/project6.jpg" alt="Project 6" onerror="this.remove()" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" class="team">
+  <div class="container">
+    <div class="section-title"><h2>Our Leadership</h2></div>
+    <div class="md">
+      <div class="photo" data-file="images/md.jpg"><img src="images/md.jpg" alt="Jeewan Awasthi, Managing Director" onerror="this.remove()" /></div>
+      <div>
+        <h3>Jeewan Awasthi</h3>
+        <div class="role">Managing Director</div>
+        <p>Jeewan Awasthi leads Quantum Engineering Solution and oversees all design, supervision, construction, renovation and valuation work. He works directly with clients to make sure every project is safe, well-built and delivered as promised.</p>
+        <p><a href="https://np.linkedin.com/in/jeewan-awasthi-225884232" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;text-decoration:none;">View LinkedIn profile →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contact Us</h2>
+      <p>Tell us about your project and we'll get back to you.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="info-item"><strong>Phone</strong><a href="tel:+977XXXXXXXXXX">+977 XX-XXX XXXX</a></div>
+        <div class="info-item"><strong>Email</strong><a href="mailto:info@quantumengineeringsolution.com.np">info@quantumengineeringsolution.com.np</a></div>
+        <div class="info-item"><strong>Office</strong><span>[Street, City], Nepal</span></div>
+        <div class="info-item"><strong>Office Hours</strong><span>Sunday – Friday, 10:00 AM – 5:00 PM</span></div>
+      </div>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your name" required />
+        <input type="text" id="phone" placeholder="Phone or email" required />
+        <textarea id="message" placeholder="Tell us about your project" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> Quantum Engineering Solution Pvt. Ltd. · Nepal
 </footer>
 
 <script>
-  // year
-  document.getElementById('yr').textContent = new Date().getFullYear();
-
-  // mobile menu
-  const menuBtn = document.getElementById('menuBtn');
-  menuBtn.addEventListener('click', () => {
-    const open = document.body.classList.toggle('menu-open');
-    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  document.querySelectorAll('#nav a').forEach(a => a.addEventListener('click', () => {
-    document.body.classList.remove('menu-open');
-    menuBtn.setAttribute('aria-expanded','false');
-  }));
-
-  // reveal on scroll
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-  // contact form -> opens mail client (static site, no backend)
-  document.getElementById('contactForm').addEventListener('submit', function(ev){
-    ev.preventDefault();
-    const name = encodeURIComponent(document.getElementById('name').value.trim());
-    const contact = encodeURIComponent(document.getElementById('email').value.trim());
-    const msg = encodeURIComponent(document.getElementById('msg').value.trim());
-    const body = `Name: ${decodeURIComponent(name)}%0D%0AContact: ${decodeURIComponent(contact)}%0D%0A%0D%0A${decodeURIComponent(msg)}`;
-    window.location.href = `mailto:info@quantumengineeringsolution.com.np?subject=Project enquiry — ${decodeURIComponent(name)}&body=${body}`;
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => document.getElementById('menu').classList.remove('open')));
+  document.getElementById('contactForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const n = document.getElementById('name').value;
+    const p = document.getElementById('phone').value;
+    const m = document.getElementById('message').value;
+    location.href = 'mailto:info@quantumengineeringsolution.com.np?subject=' + encodeURIComponent('Project enquiry from ' + n) +
+      '&body=' + encodeURIComponent('Name: ' + n + '\nContact: ' + p + '\n\n' + m);
   });
 </script>
 </body>
