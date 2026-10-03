@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://quantumengineeringsolution.com.np/" />
 <meta property="og:title" content="Quantum Engineering Solution" />
 <meta property="og:description" content="Design, site supervision, construction, renovation and valuation in Nepal." />
-<meta property="og:image" content="https://quantumengineeringsolution.com.np/images/hero.jpg" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231B2B3A'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='bold' font-size='17' fill='%23C2792B' text-anchor='middle'%3EQ%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -21,126 +21,108 @@
     --light:#F5F7F9;
     --border:#E3E7EB;
     --accent:#C2792B;
-    --white:#FFFFFF;
+    --accent-light:#FBF3EA;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{margin:0;font-family:"Inter",system-ui,sans-serif;color:var(--text);background:var(--white);line-height:1.65;font-size:16px;}
+  body{margin:0;font-family:"Inter",system-ui,sans-serif;color:var(--text);background:#fff;line-height:1.65;font-size:16px;}
   img{max-width:100%;display:block;}
   a{color:inherit;}
   h1,h2,h3{color:var(--navy);line-height:1.2;margin:0;}
-  .container{max-width:1140px;margin:0 auto;padding:0 20px;}
+  .container{max-width:1100px;margin:0 auto;padding:0 20px;}
   section{padding:80px 0;}
-  .section-title{text-align:center;max-width:640px;margin:0 auto 48px;}
-  .section-title h2{font-size:clamp(1.7rem,3.5vw,2.3rem);}
+  .section-title{text-align:center;max-width:620px;margin:0 auto 48px;}
+  .section-title h2{font-size:clamp(1.7rem,3.5vw,2.2rem);}
   .section-title p{color:var(--muted);margin:12px 0 0;}
   .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:13px 26px;border-radius:6px;border:none;cursor:pointer;font-size:1rem;font-family:inherit;}
   .btn:hover{background:#A9651F;}
-  .btn-outline{background:transparent;border:2px solid #fff;}
+  .btn-outline{background:transparent;border:2px solid rgba(255,255,255,.7);}
   .btn-outline:hover{background:#fff;color:var(--navy);}
-
-  /* Photo slot: shows a grey box with the file name until the real photo is added */
-  .photo{position:relative;background:#E9EDF1;border-radius:8px;overflow:hidden;}
-  .photo::before{content:attr(data-file);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#8A96A1;font-size:.85rem;padding:10px;text-align:center;}
-  .photo img{position:relative;width:100%;height:100%;object-fit:cover;}
 
   /* Header */
   header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:10;}
   .nav{display:flex;align-items:center;justify-content:space-between;height:70px;}
-  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;color:var(--navy);font-size:1.1rem;}
-  .logo img{height:42px;width:auto;}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;color:var(--navy);font-size:1.05rem;}
+  .logo .mark{width:36px;height:36px;border-radius:8px;background:var(--navy);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:700;}
   .nav ul{list-style:none;display:flex;gap:28px;margin:0;padding:0;}
-  .nav ul a{text-decoration:none;font-weight:500;color:var(--text);}
+  .nav ul a{text-decoration:none;font-weight:500;}
   .nav ul a:hover{color:var(--accent);}
-  .menu-btn{display:none;background:none;border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:1.2rem;cursor:pointer;}
+  .menu-btn{display:none;background:none;border:1px solid var(--border);border-radius:6px;padding:6px 12px;font-size:1.2rem;cursor:pointer;}
 
   /* Hero */
-  .hero{background:var(--navy) url("images/hero.jpg") center/cover no-repeat;position:relative;color:#fff;padding:140px 0 120px;}
-  .hero::before{content:"";position:absolute;inset:0;background:rgba(15,25,35,.6);}
-  .hero .container{position:relative;}
-  .hero h1{color:#fff;font-size:clamp(2.1rem,5vw,3.4rem);max-width:720px;}
-  .hero p{font-size:1.15rem;max-width:600px;margin:20px 0 32px;color:#E6EBEF;}
+  .hero{background:linear-gradient(135deg,#1B2B3A 0%,#2A4157 100%);color:#fff;padding:120px 0 110px;}
+  .hero h1{color:#fff;font-size:clamp(2.1rem,5vw,3.3rem);max-width:700px;}
+  .hero p{font-size:1.15rem;max-width:580px;margin:20px 0 32px;color:#D9E1E8;}
   .hero .buttons{display:flex;gap:14px;flex-wrap:wrap;}
 
   /* About */
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
-  .about-grid .photo{aspect-ratio:4/3;}
-  .about-grid h2{font-size:clamp(1.7rem,3.5vw,2.3rem);margin-bottom:16px;}
+  .about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:start;}
+  .about-grid h2{font-size:clamp(1.7rem,3.5vw,2.2rem);margin-bottom:16px;}
   .about-grid p{color:var(--muted);}
-  .highlights{display:flex;gap:30px;margin-top:24px;flex-wrap:wrap;}
-  .highlights div strong{display:block;font-size:1.6rem;color:var(--accent);}
-  .highlights div span{font-size:.9rem;color:var(--muted);}
+  .why{background:var(--light);border-radius:10px;padding:28px;}
+  .why h3{font-size:1.15rem;margin-bottom:14px;}
+  .why ul{list-style:none;margin:0;padding:0;}
+  .why li{padding:8px 0 8px 30px;position:relative;}
+  .why li::before{content:"✓";position:absolute;left:0;top:7px;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:.75rem;display:flex;align-items:center;justify-content:center;font-weight:700;}
 
   /* Services */
   .services{background:var(--light);}
-  .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-  .card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.05);}
-  .card .photo{aspect-ratio:16/10;border-radius:0;}
-  .card .body{padding:22px;}
+  .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .card{background:#fff;border-radius:10px;padding:30px 26px;border:1px solid var(--border);}
+  .card .icon{width:52px;height:52px;border-radius:10px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+  .card .icon svg{width:28px;height:28px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
   .card h3{font-size:1.2rem;margin-bottom:8px;}
   .card p{color:var(--muted);margin:0;font-size:.95rem;}
 
-  /* Projects */
-  .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-  .project-grid .photo{aspect-ratio:4/3;}
-
   /* Team */
-  .team{background:var(--light);}
-  .md{display:grid;grid-template-columns:300px 1fr;gap:44px;align-items:center;max-width:900px;margin:0 auto;}
-  .md .photo{aspect-ratio:4/5;}
+  .md{display:grid;grid-template-columns:280px 1fr;gap:44px;align-items:center;max-width:880px;margin:0 auto;}
+  .md-photo{aspect-ratio:4/5;border-radius:10px;overflow:hidden;background:var(--navy);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:4rem;font-weight:700;}
+  .md-photo img{width:100%;height:100%;object-fit:cover;}
   .md h3{font-size:1.6rem;}
   .md .role{color:var(--accent);font-weight:600;margin:4px 0 16px;}
   .md p{color:var(--muted);}
 
   /* Contact */
+  .contact{background:var(--light);}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;}
   .info-item{margin-bottom:22px;}
   .info-item strong{display:block;color:var(--navy);}
-  .info-item a{text-decoration:none;color:var(--muted);}
-  .info-item span{color:var(--muted);}
+  .info-item a,.info-item span{text-decoration:none;color:var(--muted);}
   form{display:grid;gap:14px;}
-  input,textarea{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:6px;font-family:inherit;font-size:1rem;}
+  input,textarea{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:6px;font-family:inherit;font-size:1rem;background:#fff;}
   input:focus,textarea:focus{outline:2px solid var(--accent);border-color:transparent;}
   textarea{min-height:130px;resize:vertical;}
 
-  footer{background:var(--navy);color:#C5CDD4;text-align:center;padding:30px 20px;font-size:.9rem;}
+  footer{background:var(--navy);color:#C5CDD4;text-align:center;padding:28px 20px;font-size:.9rem;}
 
-  /* Mobile */
   @media(max-width:860px){
     .about-grid,.contact-grid,.md{grid-template-columns:1fr;}
-    .md .photo{max-width:300px;}
-    .service-grid,.project-grid{grid-template-columns:1fr 1fr;}
+    .md-photo{max-width:280px;}
+    .service-grid{grid-template-columns:1fr 1fr;}
     .menu-btn{display:block;}
     .nav ul{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--border);}
     .nav ul.open{display:flex;}
     .nav ul li a{display:block;padding:14px 20px;border-top:1px solid var(--border);}
     section{padding:60px 0;}
   }
-  @media(max-width:560px){
-    .service-grid,.project-grid{grid-template-columns:1fr;}
-  }
+  @media(max-width:560px){ .service-grid{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
 
 <header>
   <div class="container nav">
-    <a href="#" class="logo">
-      <img src="images/logo.png" alt="" onerror="this.remove()" />
-      Quantum Engineering Solution
-    </a>
+    <a href="#" class="logo"><span class="mark">Q</span>Quantum Engineering Solution</a>
     <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
     <ul id="menu">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
       <li><a href="#team">Team</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </header>
 
-<!-- HERO: background photo = images/hero.jpg -->
 <section class="hero">
   <div class="container">
     <h1>Building Nepal with quality engineering</h1>
@@ -152,23 +134,26 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="container about-grid">
-    <div class="photo" data-file="images/about.jpg"><img src="images/about.jpg" alt="Our team at work on site" onerror="this.remove()" /></div>
     <div>
       <h2>About Us</h2>
       <p>Quantum Engineering Solution Pvt. Ltd. is an engineering company based in Nepal. We help homeowners, businesses and institutions plan, build, improve and value their properties.</p>
       <p>From the first drawing to the final handover, one team stays responsible for your project — so nothing gets lost between designers, builders and supervisors.</p>
-      <div class="highlights">
-        <div><strong>5</strong><span>Core services</span></div>
-        <div><strong>1</strong><span>Team, start to finish</span></div>
-      </div>
+    </div>
+    <div class="why">
+      <h3>Why choose us</h3>
+      <ul>
+        <li>Qualified engineers on every project</li>
+        <li>Designs that follow Nepal's building codes</li>
+        <li>Clear costs and honest timelines</li>
+        <li>One team from design to handover</li>
+        <li>Valuation reports accepted for bank loans</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services" class="services">
   <div class="container">
     <div class="section-title">
@@ -177,57 +162,38 @@
     </div>
     <div class="service-grid">
       <div class="card">
-        <div class="photo" data-file="images/design.jpg"><img src="images/design.jpg" alt="Building design" onerror="this.remove()" /></div>
-        <div class="body"><h3>Design</h3><p>Architectural and structural designs that follow building codes and fit your budget.</p></div>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>
+        <h3>Design</h3><p>Architectural and structural designs that follow building codes and fit your budget.</p>
       </div>
       <div class="card">
-        <div class="photo" data-file="images/supervision.jpg"><img src="images/supervision.jpg" alt="Site supervision" onerror="this.remove()" /></div>
-        <div class="body"><h3>Site Supervision</h3><p>Regular on-site checks to make sure work matches the design and quality standards.</p></div>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div>
+        <h3>Site Supervision</h3><p>Regular on-site checks to make sure work matches the design and quality standards.</p>
       </div>
       <div class="card">
-        <div class="photo" data-file="images/construction.jpg"><img src="images/construction.jpg" alt="Construction" onerror="this.remove()" /></div>
-        <div class="body"><h3>Construction</h3><p>Reliable building work delivered on schedule, with clear costs from the start.</p></div>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M2 20h20M4 20V10h6v10M14 20V4h6v16M7 13v2M17 7v2M17 12v2"/></svg></div>
+        <h3>Construction</h3><p>Reliable building work delivered on schedule, with clear costs from the start.</p>
       </div>
       <div class="card">
-        <div class="photo" data-file="images/renovation.jpg"><img src="images/renovation.jpg" alt="Renovation" onerror="this.remove()" /></div>
-        <div class="body"><h3>Renovation</h3><p>Repairs, extensions, retrofitting and upgrades for existing buildings.</p></div>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div>
+        <h3>Renovation</h3><p>Repairs, extensions, retrofitting and upgrades for existing buildings.</p>
       </div>
       <div class="card">
-        <div class="photo" data-file="images/valuation.jpg"><img src="images/valuation.jpg" alt="Property valuation" onerror="this.remove()" /></div>
-        <div class="body"><h3>Valuation</h3><p>Property valuation reports for bank loans, sales and other financial decisions.</p></div>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M7 3h10v18H7z"/><path d="M10 7h4M10 11h4M10 15h2"/></svg></div>
+        <h3>Valuation</h3><p>Property valuation reports for bank loans, sales and other financial decisions.</p>
       </div>
       <div class="card">
-        <div class="photo" data-file="images/consultation.jpg"><img src="images/consultation.jpg" alt="Consultation" onerror="this.remove()" /></div>
-        <div class="body"><h3>Consultation</h3><p>Not sure what you need? Talk to us and we'll guide you to the right solution.</p></div>
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Consultation</h3><p>Not sure what you need? Talk to us and we'll guide you to the right solution.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="container">
-    <div class="section-title">
-      <h2>Our Projects</h2>
-      <p>A look at some of our recent work.</p>
-    </div>
-    <div class="project-grid">
-      <div class="photo" data-file="images/project1.jpg"><img src="images/project1.jpg" alt="Project 1" onerror="this.remove()" /></div>
-      <div class="photo" data-file="images/project2.jpg"><img src="images/project2.jpg" alt="Project 2" onerror="this.remove()" /></div>
-      <div class="photo" data-file="images/project3.jpg"><img src="images/project3.jpg" alt="Project 3" onerror="this.remove()" /></div>
-      <div class="photo" data-file="images/project4.jpg"><img src="images/project4.jpg" alt="Project 4" onerror="this.remove()" /></div>
-      <div class="photo" data-file="images/project5.jpg"><img src="images/project5.jpg" alt="Project 5" onerror="this.remove()" /></div>
-      <div class="photo" data-file="images/project6.jpg"><img src="images/project6.jpg" alt="Project 6" onerror="this.remove()" /></div>
-    </div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section id="team" class="team">
+<section id="team">
   <div class="container">
     <div class="section-title"><h2>Our Leadership</h2></div>
     <div class="md">
-      <div class="photo" data-file="images/md.jpg"><img src="images/md.jpg" alt="Jeewan Awasthi, Managing Director" onerror="this.remove()" /></div>
+      <div class="md-photo">JA<img src="images/md.jpg" alt="Jeewan Awasthi, Managing Director" onerror="this.remove()" style="position:absolute;opacity:0" onload="this.style.position='static';this.style.opacity=1;this.parentNode.firstChild.remove()" /></div>
       <div>
         <h3>Jeewan Awasthi</h3>
         <div class="role">Managing Director</div>
@@ -238,8 +204,7 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="contact">
   <div class="container">
     <div class="section-title">
       <h2>Contact Us</h2>
@@ -262,18 +227,14 @@
   </div>
 </section>
 
-<footer>
-  © <span id="year"></span> Quantum Engineering Solution Pvt. Ltd. · Nepal
-</footer>
+<footer>© <span id="year"></span> Quantum Engineering Solution Pvt. Ltd. · Nepal</footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
   document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => document.getElementById('menu').classList.remove('open')));
   document.getElementById('contactForm').addEventListener('submit', e => {
     e.preventDefault();
-    const n = document.getElementById('name').value;
-    const p = document.getElementById('phone').value;
-    const m = document.getElementById('message').value;
+    const n = document.getElementById('name').value, p = document.getElementById('phone').value, m = document.getElementById('message').value;
     location.href = 'mailto:info@quantumengineeringsolution.com.np?subject=' + encodeURIComponent('Project enquiry from ' + n) +
       '&body=' + encodeURIComponent('Name: ' + n + '\nContact: ' + p + '\n\n' + m);
   });
